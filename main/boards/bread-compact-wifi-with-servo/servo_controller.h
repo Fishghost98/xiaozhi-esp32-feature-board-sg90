@@ -40,9 +40,10 @@ public:
 
 private:
     // 硬件相关
-    gpio_num_t servo_pin_;
-    ledc_channel_t ledc_channel_;
-    ledc_timer_t ledc_timer_;
+    ServoController servo_[SERVO_COUNT];
+
+    int servo_pins_[SERVO_COUNT];
+    int servo_trim_[SERVO_COUNT];
     
     // 状态变量
     int current_angle_;

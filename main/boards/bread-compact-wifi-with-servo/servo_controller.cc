@@ -4,10 +4,10 @@
 
 #define TAG "ServoController"
 
-ServoController::ServoController(gpio_num_t servo_pin)
+ServoController::ServoController(gpio_num_t servo_pin, ledc_channel_t ledc_channel, ledc_timer_t LEDC_TIMER)
     : servo_pin_(servo_pin)
-    , ledc_channel_(LEDC_CHANNEL_0)
-    , ledc_timer_(LEDC_TIMER_0)
+    , ledc_channel_(ledc_channel)
+    , ledc_timer_(LEDC_TIMER)
     , current_angle_(SERVO_DEFAULT_ANGLE)
     , target_angle_(SERVO_DEFAULT_ANGLE)
     , is_moving_(false)

@@ -69,7 +69,7 @@ void Oscillator::Attach(int pin, bool rev) {
                                       .clk_cfg = LEDC_AUTO_CLK};
     ESP_ERROR_CHECK(ledc_timer_config(&ledc_timer));
 
-    static int last_channel = 1;
+    static int last_channel = 0;
     last_channel = (last_channel + 1) % 7 + 1;
     ledc_channel_ = (ledc_channel_t)last_channel;
 

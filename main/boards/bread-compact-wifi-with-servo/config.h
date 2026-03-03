@@ -72,6 +72,11 @@
 #define DISPLAY_SPI_MODE 0
 #endif
 
+// -- Servo indexes for easy access
+#define HEAD 0
+#define LEFT_LEG 1
+#define RIGHT_LEG 2
+
 // SG90舵机控制引脚
 #define left_leg_pin GPIO_NUM_17
 #define right_leg_pin GPIO_NUM_18
